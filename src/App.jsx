@@ -12,21 +12,34 @@ import StudentsList from "./components/loops/StudentsList";
 import ProductsTable from "./components/loops/ProductsTable";
 
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
-import UserInfo from "./components/conditional/UserInfo"
+import UserInfo from "./components/conditional/UserInfo";
+
+import DirectFather from "./components/communication/DirectFather";
+import IndirectFather from "./components/communication/IndirectFather.jsx";
+
+import Input from "./components/form/Input"
 
 export default (_) => {
   return (
     <div className="App">
       <h1>Component App</h1>
       <div className="Cards">
+        <Card title="Controlled Components" color="#ff9933">
+          <Input />
+        </Card>
+        <Card title="Indirect communication" color=" #3333ff">
+          <IndirectFather />
+        </Card>
+        <Card title="Direct communication" color="#ff3399">
+          <DirectFather />
+        </Card>
         <Card title="Conditional rendering" color="#004d1a">
-          <EvenOrOdd number={20}/>
-          <EvenOrOdd number={21}/>
-          <EvenOrOdd number={22}/>
-          <UserInfo user = {{name: "Joao"}}></UserInfo>
-          <UserInfo user = {{name: "Mary"}}></UserInfo>
-          <UserInfo user = {{email: "rgx@rgx.com"}}></UserInfo>
-
+          <EvenOrOdd number={20} />
+          <EvenOrOdd number={21} />
+          <EvenOrOdd number={22} />
+          <UserInfo user={{ name: "Joao" }}></UserInfo>
+          <UserInfo user={{ name: "Mary" }}></UserInfo>
+          <UserInfo user={{ email: "rgx@rgx.com" }}></UserInfo>
         </Card>
         <Card title="Tables" color="#F5B041">
           <ProductsTable />
