@@ -11,12 +11,24 @@ import People from "./components/basics/People";
 import StudentsList from "./components/loops/StudentsList";
 import ProductsTable from "./components/loops/ProductsTable";
 
+import EvenOrOdd from "./components/conditional/EvenOrOdd";
+import UserInfo from "./components/conditional/UserInfo"
+
 export default (_) => {
   return (
     <div className="App">
       <h1>Component App</h1>
       <div className="Cards">
-      <Card title="Tables" color="#F5B041">
+        <Card title="Conditional rendering" color="#004d1a">
+          <EvenOrOdd number={20}/>
+          <EvenOrOdd number={21}/>
+          <EvenOrOdd number={22}/>
+          <UserInfo user = {{name: "Joao"}}></UserInfo>
+          <UserInfo user = {{name: "Mary"}}></UserInfo>
+          <UserInfo user = {{email: "rgx@rgx.com"}}></UserInfo>
+
+        </Card>
+        <Card title="Tables" color="#F5B041">
           <ProductsTable />
         </Card>
         <Card title="Lists" color="#85C1E9">
